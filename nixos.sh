@@ -4,7 +4,7 @@ if [ $prompt = "y" ]
 then
 	read -p "What is the hostname? " name
 
-	sed "s/nixos/$name/g" configuration.nix
+	sed -i "s/nixos/$name/g" configuration.nix
 
 	rm /etc/nixos/configuration.nix
 	cp ./configuration.nix /etc/nixos/configuration.nix
