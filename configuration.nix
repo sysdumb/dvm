@@ -11,7 +11,7 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/sda";
 
-  networking.hostName = "nixos"; 
+  networking.hostName = "sys"; 
   networking.networkmanager.enable = true;
 
   # Set your time zone.
@@ -32,14 +32,14 @@
 
   console.useXkbConfig = true;
   services.xserver = {
-    enable = true;
+    # enable = true;
     # desktopManager.plasma5.enable = true;
     xkbOptions = "ctrl:swapcaps";
   };
 
   # List services that you want to enable:
 
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
