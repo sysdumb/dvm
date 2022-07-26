@@ -36,3 +36,12 @@ then
 	echo "Add this to your github as the public key:"
 	cat ~/.ssh/id_ed25519.pub
 fi
+
+read -p "Do you want to add neovim config (y/n): " vim
+
+if [ $vim = "y" ]
+then
+	cp ./nvim.nix ~/.config/nixpkgs/nvim.nix
+fi
+
+echo "You are going to have to import the .nix files into your home.nix"
