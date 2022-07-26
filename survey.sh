@@ -15,10 +15,10 @@ if [ $configGit = "y" ]
 then
 	cp ./git.nix ~/.config/nixpkgs/git.nix
 	read -p "Enter your username: " username
-	sed -i 's/gitUsername/${username}/g' ~/.config/nixpkgs/git.nix
+	sed -i "s/gitUsername/${username}/g" ~/.config/nixpkgs/git.nix
 
 	read -p "Enter your email: " email
-	sed -i 's/gitEmail/${email}/g' ~/.config/nixpkgs/git.nix
+	sed -i "s/gitEmail/${email}/g" ~/.config/nixpkgs/git.nix
 fi
 
 read -p "Do you want to create a ssh key for github (y/n): " key
